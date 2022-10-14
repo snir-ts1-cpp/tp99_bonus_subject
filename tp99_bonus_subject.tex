@@ -1,0 +1,82 @@
+\documentclass[10pt]{article}
+\usepackage{macros}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+
+%----------------------------------------------------
+% Paramétrage de la fiche
+%----------------------------------------------------
+\sequence{Programmation en langage C++}
+\seqlogo{\faCode}
+\titrefiche{TP - BONUS}
+\version{v1.0}
+\dateversion{28.09.22}
+\type{TP}
+
+%----------------------------------------------------
+% Définition des pieds et têtes de page
+%----------------------------------------------------
+% Pour toutes les pages
+\pagestyle{fancy}
+\fancyhead[L]{\seqlogo\ \sequenceVal}
+\fancyhead[R]{\titreficheVal}
+\fancyfoot[L]{BTS SNIR TS1 - Lycée Louis Rascol, Albi}
+\fancyfoot[R]{\ccbyncsaeu}
+\fancyfoot[C]{\thepage\ / \pageref{LastPage}}
+% Pour la première page
+\fancypagestyle{firstpage}{%
+  \lhead{}
+  \rhead{}
+  \renewcommand{\headrulewidth}{0pt}
+}
+
+%----------------------------------------------------
+% Début du document
+%----------------------------------------------------
+\begin{document}
+\maketitle
+\thispagestyle{firstpage}
+
+%-----------------------
+% Exo 1
+%-----------------------
+\section{Racines Carrées}
+Écrire un programme qui calcule les racines carrées de nombres fournis en donnée.\\
+Il s’arrêtera lorsqu’on lui fournira la valeur 0. Il refusera les valeurs négatives. Son
+exécution se présentera ainsi :
+
+\begin{textcode}
+    donnez un nombre positif : 2
+    sa racine carrée est : 1.414214e+00 donnez un nombre positif : -1
+    svp positif
+    donnez un nombre positif : 5
+    sa racine carrée est : 2.236068e+00 donnez un nombre positif : 0
+\end{textcode}
+
+\begin{noteblock}
+    Rappelons que la fonction sqrt fournit la racine carrée (double) de la valeur (double) qu’on lui donne en argument.
+\end{noteblock}
+
+
+%-----------------------
+% Exo 2
+%-----------------------
+\section{Jeu de cartes}
+On dispose d'un jeu de 52 cartes numérotées de 0 à 51.
+
+\smallskip
+Proposer deux instructions de type « alternative » qui, compte-tenu du numéro de la carte, précisent respectivement la couleur (pique, cœur, carreau, trèfle dans cet ordre) et la valeur de la carte (1, 2, ..., 10, valet, dame, roi).
+
+Exemple de sortie console :
+
+\begin{textcode}
+    Saisissez un numero de carte : 5
+    6 de pique
+
+    Saisissez un numero de carte : 23
+    valet de coeur
+
+    Saisissez un numero de carte : 44
+    6 de trèfle
+\end{textcode}
+
+\end{document}
